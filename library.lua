@@ -145,6 +145,7 @@ do
 		--
 		function Library:RGBA(r, g, b, alpha)
 			local rgb = Color3.fromRGB(r, g, b)
+			--[[
 			local mt = table.clone(getrawmetatable(rgb))
 
 			setreadonly(mt, false)
@@ -159,7 +160,7 @@ do
 			end)
 
 			setrawmetatable(rgb, mt)
-
+			]]
 			return rgb
 		end
 		--
