@@ -5,8 +5,8 @@ do
 	
 	-- Custom Fonts
 	local fonts = {
-		{ ttf = "Font.ttf", json = "Font.json", url = "https://raw.githubusercontent.com/n6ns/data/main/hi", name = "Font" },
-		{ ttf = "Font2.ttf", json = "Font2.json", url = "https://raw.githubusercontent.com/n6ns/data/main/hi2", name = "Font2" },
+		{ ttf = "Font.ttf", json = "Font.json", url = "https://raw.githubusercontent.com/n6ns/data/main/hi", name = "Font" };
+		{ ttf = "Font2.ttf", json = "Font2.json", url = "https://raw.githubusercontent.com/n6ns/data/main/hi2", name = "Font2" };
 	}
 
 	for _, font in fonts do
@@ -16,13 +16,13 @@ do
 
 		if not isfile(font.json) then
 			local fontConfig = {
-				name = font.name,
+				name = font.name;
 				faces = {
 					{
-						name = "Regular",
-						weight = 200,
-						style = "normal",
-						assetId = getcustomasset(font.ttf)
+						name = "Regular";
+						weight = 200;
+						style = "normal";
+						assetId = getcustomasset(font.ttf);
 					}
 				}
 			}
@@ -31,12 +31,12 @@ do
 	end
 
 	local DrawingFontsEnum = {
-		[0] = Font.new(getcustomasset("Font.json"), Enum.FontWeight.Regular),
-		[1] = Font.new(getcustomasset("Font2.json"), Enum.FontWeight.Regular),
+		[0] = Font.new(getcustomasset("Font.json"), Enum.FontWeight.Regular);
+		[1] = Font.new(getcustomasset("Font2.json"), Enum.FontWeight.Regular);
 	}
 	local Fonts = {
-		["Font"] = 0
-		["Font2"] = 1
+		["Font"] = 0;
+		["Font2"] = 1;
 	}
 	
 	Library = {
