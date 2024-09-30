@@ -48,7 +48,7 @@ local Library = {};
 do
 	Library = {
 		Open = true;
-		font = GetFontFromIndex(0);
+		font = Library:GetFontFromIndex(0);
 		Accent = Color3.fromRGB(225, 102, 102);
 		Pages = {};
 		Sections = {};
