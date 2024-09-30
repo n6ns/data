@@ -1,6 +1,12 @@
+
+
+
+local Library = {};
+
 -- Custom Fonts
 	local fonts = {
 		{ ttf = "Font.ttf", json = "Font.json", url = "https://raw.githubusercontent.com/n6ns/data/main/hi", name = "Font" },
+		{ ttf = "Font2.ttf", json = "Font2.json", url = "https://raw.githubusercontent.com/n6ns/data/main/hi2", name = "Font2" },
 	}
 
 	for _, font in fonts do
@@ -26,19 +32,19 @@
 
 	local DrawingFontsEnum = {
 		[0] = Font.new(getcustomasset("Font.json"), Enum.FontWeight.Regular),
+		[1] = Font.new(getcustomasset("Font2.json"), Enum.FontWeight.Regular),
 	}
 
-	local function GetFontFromIndex(fontIndex)
+	local function Library:GetFontFromIndex(fontIndex)
 		return DrawingFontsEnum[fontIndex]
 	end
 
 	local Fonts = {
 		["Font"] = 0
+		["Font2"] = 1
 	}
 --
 
-
-local Library = {};
 do
 	Library = {
 		Open = true;
