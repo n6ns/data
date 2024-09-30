@@ -1,7 +1,6 @@
-
+local Library = {};
 
 do
-	local Library = {};
 	
 	-- Custom Fonts
 	local fonts = {
