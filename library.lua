@@ -1,9 +1,9 @@
 
 
-
-local Library = {};
-
--- Custom Fonts
+do
+	local Library = {};
+	
+	-- Custom Fonts
 	local fonts = {
 		{ ttf = "Font.ttf", json = "Font.json", url = "https://raw.githubusercontent.com/n6ns/data/main/hi", name = "Font" },
 		{ ttf = "Font2.ttf", json = "Font2.json", url = "https://raw.githubusercontent.com/n6ns/data/main/hi2", name = "Font2" },
@@ -34,21 +34,14 @@ local Library = {};
 		[0] = Font.new(getcustomasset("Font.json"), Enum.FontWeight.Regular),
 		[1] = Font.new(getcustomasset("Font2.json"), Enum.FontWeight.Regular),
 	}
-
-	local function Library:GetFontFromIndex(fontIndex)
-		return DrawingFontsEnum[fontIndex]
-	end
-
 	local Fonts = {
 		["Font"] = 0
 		["Font2"] = 1
 	}
---
-
-do
+	
 	Library = {
 		Open = true;
-		font = Library:GetFontFromIndex(0);
+		font = DrawingFontsEnum[0];
 		Accent = Color3.fromRGB(225, 102, 102);
 		Pages = {};
 		Sections = {};
@@ -131,6 +124,11 @@ do
 
 	-- // Misc Functions
 	do
+
+		function Library:GetFontFromIndex(fontIndex)
+			return DrawingFontsEnum[fontIndex]
+		end
+		
 		function Library:Connection(Signal, Callback)
 			local Con = Signal:Connect(Callback)
 			return Con
