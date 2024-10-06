@@ -924,6 +924,13 @@ do
 				end
 			end
 
+			function Window:UpdateStatus(str)
+				local string = tostring(str)
+					
+				Status.Text = string
+				StatusShadow.Text = string
+			end
+
 			-- // Returns
 			Library.Holder = Outline
 			return setmetatable(Window, Library)
