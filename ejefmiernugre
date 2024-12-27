@@ -1,0 +1,16 @@
+for _,v in getgc() do
+    if typeof(v) == 'function' then
+        local f_info = debug.getinfo(v);
+        local f_name = f_info.name;
+
+        if f_name == 'getenv' then
+
+            hookfunction( v, function()
+                warn('blocked')
+                return;
+            end)
+
+           -- hehe 
+        end
+    end
+end
