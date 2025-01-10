@@ -1,5 +1,5 @@
 local draw = {}	
-
+local Color3fromRGB = Color3.fromRGB
 draw.settings = {
 	Line = {
 		Thickness = 1;
